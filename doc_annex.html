@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article 115 EPC Third-Party Observation Evidentiary Dossier - EP 4523100.3 (Annex A Series)</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        h1, h2, h3 {
+            color: #111;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 5px;
+        }
+        h1 { font-size: 24px; }
+        h2 { font-size: 18px; margin-top: 30px; }
+        h3 { font-size: 15px; border-bottom: none; margin-top: 15px; color: #003366; }
+        
+        /* STRICT IMAGE CONTAINER & SIZING CONTROL */
+        .img-container {
+            margin: 15px 0;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow: hidden;
+            display: block;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Standard Sizing Rules */
+        .img-container.full-width {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .img-container.half-width {
+            width: 50%;
+            max-width: 50%;
+            margin: 15px auto; /* Centered layout for half-width exhibits */
+        }
+
+        /* Forced Image Boundaries */
+        .img-full {
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            object-fit: contain;
+        }
+
+        .img-fallback {
+            padding: 15px;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            font-weight: bold;
+            background: #eef2f5;
+            border: 1px dashed #999;
+        }
+
+        .meta-table, .matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+        .meta-table th, .meta-table td, .matrix-table th, .matrix-table td {
+            border: 1px solid #ccc;
+            padding: 8px 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .meta-table th, .matrix-table th {
+            background-color: #003366;
+            color: #fff;
+        }
+        .matrix-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .exhibit-card {
+            border: 1px solid #bbb;
+            background: #fafafa;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+        .chain-box {
+            background-color: #eef4f8;
+            border-left: 4px solid #003366;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        .chain-box ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .dispute-notice {
+            background-color: #fff8e7;
+            border: 1px solid #ffe0b2;
+            border-left: 4px solid #ff9800;
+            padding: 12px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .img-container.half-width {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+    <script>
+        // Prevents page hanging or infinite loading spinners if local image files are missing
+        function handleImgError(image, annexId) {
+            image.style.display = 'none';
+            var container = image.parentElement;
+            var fallback = document.createElement('div');
+            fallback.className = 'img-fallback';
+            fallback.innerHTML = 'Image File: <code>images-evidences/' + annexId + '.png</code><br><small>(File unreadable or path mismatched)</small>';
+            container.appendChild(fallback);
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>EVIDENTIARY DOSSIER UNDER ARTICLE 115 EPC</h1>
+    <p><strong>Target Application:</strong> European Patent Application EP 4523100.3 / PCT/US2023/019103 ("Split Stay Ranking and Matching")</p>
+    <p><strong>Applicant:</strong> Airbnb, Inc.</p>
+
+    <div class="dispute-notice">
+        <strong>Prior Dispute Citation:</strong> Kayak Dispute (2024) regarding split-stay accommodation search systems and algorithmic multi-segment itinerary matching.
+    </div>
+
+    <h2>Coherent Evidentiary Chain</h2>
+    <div class="chain-box">
+        <ol>
+            <li><strong>ANNEX-A-002, ANNEX-A-003, ANNEX-A-004</strong> — The operational baseline documents prior manual relocation records (2016–2017) and historical booking logs[cite: 34, 35, 36].</li>
+            <li><strong>ANNEX-A-005, ANNEX-A-006, ANNEX-A-007</strong> — Direct communications with guests establish the operational split-stay/relocation workflow (2018)[cite: 37, 38, 39].</li>
+            <li><strong>ANNEX-A-008, ANNEX-A-009, ANNEX-A-010</strong> — The 2019 Algorithm I specification discloses availability checking, same-hotel split stay, and different-hotel split stay structures[cite: 40, 41, 42].</li>
+            <li><strong>ANNEX-A-011, ANNEX-A-012, ANNEX-A-013, ANNEX-A-014, ANNEX-A-015</strong> — Third-party disclosures and email transmissions (Plug and Play, June–July 2019) establish fixed prior public disclosure dates and live prototype links[cite: 43, 44, 45, 46, 47].</li>
+            <li><strong>ANNEX-A-016, ANNEX-A-017, ANNEX-A-018</strong> — The Relocation Program specification details the exact multi-segment room and hotel relocation algorithms[cite: 48, 49, 50].</li>
+            <li><strong>ANNEX-A-019, ANNEX-A-020, ANNEX-A-021, ANNEX-A-022, ANNEX-A-023, ANNEX-C-024, ANNEX-A-025, ANNEX-A-026, ANNEX-A-027</strong> — The system architecture slide decks detail real availability solutions, room/hotel split matching, and competition advantages[cite: 51, 52, 53, 54, 55, 56, 57, 58, 59].</li>
+            <li><strong>ANNEX-A-028, ANNEX-A-029, ANNEX-A-030</strong> — Official entity registration and WIPO copyright/PCT inquiries (June 2019) establish institutional provenance prior to third-party adoption[cite: 60, 61, 62].</li>
+        </ol>
+    </div>
+
+    <h2>Evidentiary Annex Grouping & Claims Mapping</h2>
+
+    <!-- EXHIBIT A-PRE01 -->
+    <div class="exhibit-card">
+        <h3>Exhibit A-PRE01: Earlier Operational Relocation Records (2016)</h3>
+        <p><strong>Page Reference:</strong> Page 1 of 6 | <strong>Annex Reference:</strong> ANNEX-D-001</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/Manula-2016.PNG" alt="Exhibit A-PRE01 - Earlier Operational Relocation Records (2016)" class="img-full" onerror="handleImgError(this, 'ANNEX-D-001')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Operational Baseline / Background Prior Art</p>
+        <p><strong>Source Text Excerpt:</strong> Relocation Status Dec/Jan (2016) booking records from Booking.com and HotelBeds documenting an operational relocation workflow where an existing booking is associated with a receiving property</p>
+    </div>
+
+    
+
+    <!-- EXHIBIT A-PRE03 -->
+    <div class="exhibit-card">
+        <h3>Exhibit A-PRE03: Manual Relocation Registry 2017 (Sheet 2)</h3>
+        <p><strong>Page Reference:</strong> Page 2 of 6 | <strong>Annex Reference:</strong> ANNEX-D-002</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/Manual-2017-2.PNG" alt="Exhibit A-PRE03 - Manual Relocation Registry 2017 Sheet 2" class="img-full" onerror="handleImgError(this, 'ANNEX-D-002')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim /p>
+        <p><strong>Source Text Excerpt:</strong> Financial accounting and commission breakdown for inter-property relocation transfers (NUR to LOOP, NUR to MWEZI).</p>
+        <p><strong>Source Text Excerpt:</strong> Manual relocation registry detailing inter-property transfers (e.g., Airbnb booking HMYBMA5F33 transferred from Casa to Mwezi).</p>
+        <p><strong>Booing ID / AirBNB -Guest Relocation -HMYBMA5F33</strong></p>
+    </div>
+
+
+
+    <!-- EXHIBIT A-PRE02 -->
+    <div class="exhibit-card">
+        <h3>Exhibit A-PRE02: Manual Relocation Registry 2017 (Sheet 1)</h3>
+        <p><strong>Page Reference:</strong> Page 3 of 6 | <strong>Annex Reference:</strong> ANNEX-D-003</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/Manual-2017.PNG" alt="Exhibit A-PRE02 - Manual Relocation Registry 2017 Sheet 1" class="img-full" onerror="handleImgError(this, 'ANNEX-D-003')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim</p>
+        <p><strong>Source Text Excerpt:</strong> Manual relocation registry detailing inter-property transfers& Hotel Relocation </p>
+    </div>
+
+    <!-- EXHIBIT A-005 -->
+    <div class="exhibit-card">
+        <h3>Exhibit A: Communication with Relocated Guests 2018 </h3>
+        <p><strong>Page Reference:</strong> Page 4 of 6 | <strong>Annex Reference:</strong> ANNEX-D-004</p>
+        
+        <div class="img-container half-width">
+            <img src="images-evidences/3-1.png" alt="Exhibit A - Guest Communication 2018 Page 3" class="img-full" onerror="handleImgError(this, 'ANNEX-D-004')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim</p>
+        <p><strong>Source Text Excerpt:</strong> Direct guest message confirmation agreeing to relocation offer for stay period 19.09.2018–25.09.2018 at Fun Beach Resort</p>
+    </div>
+
+    <!-- EXHIBIT A-006 -->
+    <div class="exhibit-card">
+        <h3>Exhibit A: Communication with Relocated Guests 2018 </h3>
+        <p><strong>Page Reference:</strong> Page 5 of 6 | <strong>Annex Reference:</strong> ANNEX-D-005</p>
+        
+        <div class="img-container half-width">
+            <img src="images-evidences/3-2.png" alt="Exhibit A - Guest Communication 2018 Page 4" class="img-full" onerror="handleImgError(this, 'ANNEX-D-005')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim </p>
+        <p><strong>Source Text Excerpt:</strong> "We will take the FUN Beach Resort as you offered from 8 - 16 oct for 8 nights."</p>
+    </div>
+
+    <!-- EXHIBIT A-007 -->
+    <div class="exhibit-card">
+        <h3>Exhibit A: Communication with Relocated Guests 2018 </h3>
+        <p><strong>Page Reference:</strong> Page 6 of 6 | <strong>Annex Reference:</strong> ANNEX-D-006</p>
+        
+        <div class="img-container half-width">
+            <img src="images-evidences/2-2.png" alt="Exhibit A - Guest Communication 2018 Page 5" class="img-full" onerror="handleImgError(this, 'ANNEX-D-006')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim </p>
+        <p><strong>Source Text Excerpt:</strong> Split stay agreement: "Ok perfect so 2 nights in Mwrzi and 3 nights at fun.</p>
+    </div>
+
+    <!-- EXHIBIT A-008 -->
+    <div class="exhibit-card">
+        <h3>Exhibit A-01P: Selected 2019 Algorithm I Specification </h3>
+        <p><strong>Page Reference:</strong> Page 1 of 1 | <strong>Annex Reference:</strong> ANNEX-D-007</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/11-refresh.png" alt="Exhibit A-01P - Algorithm I Specification Page 1" class="img-full" onerror="handleImgError(this, 'ANNEX-D-007')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim </p>
+        <p><strong>Source Text Excerpt:</strong> Algorithm I: 1. Get list of available rooms in hotel; 2. Perform split search between these rooms in selected period[cite: 40]. Defines `$params` array with array-based date ranges for same-hotel split stay.</p>
+    </div>
+
+    
+
+    
+
+    <!-- EXHIBIT A-011 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-01A: 1 June 2019 Correspondence Initiating Plug and Play Discussion</h3>
+        <p><strong>Page Reference:</strong> Page 1 of 5 | <strong>Annex Reference:</strong> ANNEX-D-008</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-01A.png" alt="Exhibit D-01A - Plug and Play Email 1 June 2019" class="img-full" onerror="handleImgError(this, 'ANNEX-D-008')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Third-Party Public Disclosure Baseline</p>
+        <p><strong>Source Text Excerpt:</strong> "Will be glad to discuss relocation program on booking engine its ready for roll out as hotelier consider its revolution on OTA online travel agent business". Email dated Sat, Jun 1, 2019.</p>
+    </div>
+
+    <!-- EXHIBIT A-012 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-02A: 3rd Party Request Presentation Before Proposed Discussion</h3>
+        <p><strong>Page Reference:</strong> Page 2 of 5 | <strong>Annex Reference:</strong> ANNEX-D-009</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-02A.png" alt="Exhibit D-02A - Plug and Play Email 3 June 2019" class="img-full" onerror="handleImgError(this, 'ANNEX-D-009')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Third-Party Public Disclosure Baseline</p>
+        <p><strong>Source Text Excerpt:</strong> Plug and Play confirms receipt and circulation of the presentation within its ventures team (Mon, Jun 3, 2019).</p>
+    </div>
+
+    <!-- EXHIBIT A-013 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-02A: 3 June 2019 Email Transmitting Materials and Prototype Links</h3>
+        <p><strong>Page Reference:</strong> Page 3 of 5 | <strong>Annex Reference:</strong> ANNEX-D-010</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-03A.png" alt="Exhibit D-03A - Email Transmitting PDF and Video Links" class="img-full" onerror="handleImgError(this, 'ANNEX-D-010')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.5</p>
+        <p><strong>Source Text Excerpt:</strong> Transmission of `Relocation program.pdf` and `HotelsPlus.pps` alongside live prototype links: `https://youtu.be/82XxQouNwQc` and `https://youtu.be/M1Nno3fNYpU` dated June 3, 2019[cite: 45].</p>
+    </div>
+
+    <!-- EXHIBIT A-014 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-02A: 5 June 2019 Plug and Play discussion</h3>
+        <p><strong>Page Reference:</strong> Page 4 of 5 | <strong>Annex Reference:</strong> ANNEX-A-011</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIt-D-04A.png" alt="Exhibit D-04A - Updated Pitch Deck Email 05 July 2019" class="img-full" onerror="handleImgError(this, 'ANNEX-D-011')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Plug and Play confirms receipt/circulation of the presentation within its ventures team.</p>
+        <p><strong>Source Text Excerpt:</strong> Transmission of presentation (`hotelsPlus.ppt`) on Mon, Jul 05, 2019.</p>
+        <p><strong>Source Text Excerpt:</strong> Confirmation of venture team circulation of `Relocation program.pdf` dated Wed, Jun 5, 2019.</p>
+   </div>
+
+    <!-- EXHIBIT A-015 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-02A: 15 June 2019 Plug and Play Discussion Confirmation</h3>
+        <p><strong>Page Reference:</strong> Page 5 of 5 | <strong>Annex Reference:</strong> ANNEX-D-012</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIt-D-05A.png" alt="Exhibit D-02A - Plug and Play Confirmation 15 June 2019" class="img-full" onerror="handleImgError(this, 'ANNEX-D-012')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Third-Party Public Disclosure Baseline</p>
+        <p><strong>Source Text Excerpt:</strong> Later transmission of an updated presentation; used as corroborative evidence of continued presentation of the relocation platform in July 2019.</p>
+    </div>
+
+    <!-- EXHIBIT A-016 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-01B: Relocation Program PDF</h3>
+        <p><strong>Page Reference:</strong> Page 1 of 3 | <strong>Annex Reference:</strong> ANNEX-D-013</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT D-01B.png" alt="Exhibit D-01B - Relocation Program PDF Page 1" class="img-full" onerror="handleImgError(this, 'ANNEX-D-013')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> Explicit disclosure of Algorithm 1 (relocation to next room type / same hotel) and Algorithm 2 (relocation to nearest hotel in same area) with calendar segment matrices.</p>
+    </div>
+
+    <!-- EXHIBIT A-017 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-01B: Relocation Program PDF (Page 2)</h3>
+        <p><strong>Page Reference:</strong> Page 2 of 3 | <strong>Annex Reference:</strong> ANNEX-D-014</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-01B.png" alt="Exhibit D-01B - Relocation Program PDF Page 2" class="img-full" onerror="handleImgError(this, 'ANNEX-D-014')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> Booking engine invoice showing split stay segments combining Standard Room and Double Room with Two Double Beds</p>
+    </div>
+
+    <!-- EXHIBIT A-018 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-01B: Relocation Program PDF (Page )</h3>
+        <p><strong>Page Reference:</strong> Page 3 of 3 | <strong>Annex Reference:</strong> ANNEX-D-015</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-01B-.png" alt="Exhibit D-01B - Relocation Program PDF Page 4" class="img-full" onerror="handleImgError(this, 'ANNEX-D-015')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> Inter-hotel relocation specification across date ranges combining different hotel properties (e.g. Park Lany Hotel & Rotem King Villa).</p>
+    </div>
+
+    <!-- EXHIBIT A-019 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-03C: Pitch Deck June 2019 Version (Page 1)</h3>
+        <p><strong>Page Reference:</strong> Page 1 of 6 | <strong>Annex Reference:</strong> ANNEX-D-016</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-03C.png" alt="Exhibit D-03C - Pitch Deck June 2019 Page 1" class="img-full" onerror="handleImgError(this, 'ANNEX-D-016')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> Analysis of the "Real Availability Paradox" on major booking engines and intro to Hotels Plus Relocation Program.</p>
+    </div>
+
+    <!-- EXHIBIT A-020 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-03C: Pitch Deck June 2019 Version (Page 2)</h3>
+        <p><strong>Page Reference:</strong> Page 2 of 6 | <strong>Annex Reference:</strong> ANNEX-D-017</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-03C-1.png" alt="Exhibit D-03C - Pitch Deck June 2019 Page 2" class="img-full" onerror="handleImgError(this, 'ANNEX-D-017')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> Algorithm 2 layout showing multi-hotel relocation mapping across calendar dates.</p>
+    </div>
+
+    <!-- EXHIBIT A-021 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-03C: System Architecture and Slide Deck 1 (Page 3)</h3>
+        <p><strong>Page Reference:</strong> Page 3 of 6 | <strong>Annex Reference:</strong> ANNEX-D-018</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-03C-2.png" alt="Exhibit D-03C - System Architecture Page 3" class="img-full" onerror="handleImgError(this, 'ANNEX-D-018')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> User interface presentation displaying relocation offer notifications and search result options.</p>
+    </div>
+
+    <!-- EXHIBIT A-022 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-03C: System Architecture and Slide Deck 1 (Page 4)</h3>
+        <p><strong>Page Reference:</strong> Page 4 of 6 | <strong>Annex Reference:</strong> ANNEX-D-019</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-03C-3.png" alt="Exhibit D-03C - System Architecture Page 4" class="img-full" onerror="handleImgError(this, 'ANNEX-D-019')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.6</p>
+        <p><strong>Source Text Excerpt:</strong> Relocation room type booking summary and invoice structure[cite: 54].</p>
+    </div>
+
+    <!-- EXHIBIT A-023 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-03C: System Architecture and Slide Deck 1 (Page 5)</h3>
+        <p><strong>Page Reference:</strong> Page 5 of 6 | <strong>Annex Reference:</strong> ANNEX-D-020</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-03C-6.png" alt="Exhibit D-03C - System Architecture Page 5" class="img-full" onerror="handleImgError(this, 'ANNEX-D-020')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim </p>
+        <p><strong>Source Text Excerpt:</strong> Inter-hotel relocation booking parameters and real customer feedback log.</p>
+    </div>
+
+    <!-- EXHIBIT C-024 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-03C: System Architecture and Slide Deck 1 (Page 6)</h3>
+        <p><strong>Page Reference:</strong> Page 6 of 6 | <strong>Annex Reference:</strong> ANNEX-D-021</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-03C-7.png" alt="Exhibit D-03C - Product Demo Links Page 6" class="img-full" onerror="handleImgError(this, 'ANNEX-D-021')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.7</p>
+        <p><strong>Source Text Excerpt:</strong> Product demonstration URLs (`https://youtu.be/GaLMILBXNXC` and `https://youtu.be/82XxQouNwOc`) and planned future enhancements.</p>
+    </div>
+
+    <!-- EXHIBIT A-025 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-03C1: System Architecture and Slide Deck 2 </h3>
+        <p><strong>Page Reference:</strong> Page 1 of 3 | <strong>Annex Reference:</strong> ANNEX-D-022</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-03C-Jul-1.png" alt="Exhibit D-03C1 - Slide Deck 2 Page 1" class="img-full" onerror="handleImgError(this, 'ANNEX-D-022')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> Industry problem statement detailing the lack of combined room type availability search in standard engines.</p>
+    </div>
+
+    <!-- EXHIBIT A-026 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-03C1: System Architecture and Slide Deck 2 (Page 2)</h3>
+        <p><strong>Page Reference:</strong> Page 2 of 3 | <strong>Annex Reference:</strong> ANNEX-D-23</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-03C1-Jul-2.png" alt="Exhibit D-03C1 - Slide Deck 2 Page 2" class="img-full" onerror="handleImgError(this, 'ANNEX-D-23')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> UI solution screens showing same-hotel room relocation and same-area hotel relocation.</p>
+    </div>
+
+    <!-- EXHIBIT A-027 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-03C1: System Architecture and Slide Deck 2 (Page 3)</h3>
+        <p><strong>Page Reference:</strong> Page 3 of 3 | <strong>Annex Reference:</strong> ANNEX-D-024</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-03C1-Jul-3.png" alt="Exhibit D-03C1 - Slide Deck 2 Page 3" class="img-full" onerror="handleImgError(this, 'ANNEX-d-024')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> Product search/ranking workflow and competitive advantage matrix demonstrating occupancy gap filling.</p>
+    </div>
+
+    <!-- EXHIBIT A-028 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-04D: Registered Anuket Digital Group Commercial Register Printout</h3>
+        <p><strong>Page Reference:</strong> Page 1 of 3 | <strong>Annex Reference:</strong> ANNEX-D-025</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-04D.png" alt="Exhibit D-04D - Commercial Register Printout" class="img-full" onerror="handleImgError(this, 'ANNEX-D-025')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Corporate Identity & System Operator Provenance</p>
+        <p><strong>Source Text Excerpt:</strong> Official commercial register printout (Äriregistri) dated September 14, 2019 for Anuket Digital Group OÜ (Registry Code 14804245).</p>
+    </div>
+
+    <!-- EXHIBIT A-029 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-04D: WIPO Contact Form / IP-Protection (Inquiry)</h3>
+        <p><strong>Page Reference:</strong> Page 2 of 3 | <strong>Annex Reference:</strong> ANNEX-D-026</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-04D-1.png" alt="Exhibit D-04D - WIPO Contact Form Inquiry" class="img-full" onerror="handleImgError(this, 'ANNEX-D-026')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Algorithmic Invention Provenance Baseline</p>
+        <p><strong>Source Text Excerpt:</strong> Official WIPO confirmation dated Fri, Jun 14, 2019 (inquiring) about PCT and copyright registration for overbooking split-stay algorithms.</p>
+    </div>
+
+    <!-- EXHIBIT A-030 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-04E: Reply IP-Protection Inquiry to WIPO PCT Infoline</h3>
+        <p><strong>Page Reference:</strong> Page 3 of 3 | <strong>Annex Reference:</strong> ANNEX-D-027</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-04E.png" alt="Exhibit D-04E - WIPO PCT Infoline Email" class="img-full" onerror="handleImgError(this, 'ANNEX-D-027')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Algorithmic Invention Provenance Baseline</p>
+        <p><strong>Source Text Excerpt:</strong> Confirmation to WIPO PCT Infoline dated June 14, 2019 detailing algorithms solving overbooking gaps prior to third-party adoption.</p>
+    </div>
+    <!--Exhibit D-04E-->
+
+     <!-- EXHIBIT A-030 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-05F: Domain Infrastructures </h3>
+        <p><strong>Page Reference:</strong> Page 1 of 4 | <strong>Annex Reference:</strong> ANNEX-D-028</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-05F.png" alt="Exhibit D-05F - Domain Infrastructures " class="img-full" onerror="handleImgError(this, 'ANNEX-D-028')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Domain Infrastructures </p>
+        <p><strong>Source Text Excerpt:</strong> CDomain Infrastructures </p>
+    </div>
+<!--Exhibit D-05F-->
+  <!-- EXHIBIT A-030 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-05F: GoDaddy order/invoice — malindi-dg.com /h3>
+        <p><strong>Page Reference:</strong> Page 2 of 4 | <strong>Annex Reference:</strong> ANNEX-D-029</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-05F-1.png" alt="Exhibit D-05F - Domain Infrastructures " class="img-full" onerror="handleImgError(this, 'ANNEX-D-029')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> GoDaddy order/invoice — malindi-dg.com </p>
+        <p><strong>Source Text Excerpt:</strong> GoDaddy order/invoice — malindi-dg.com </p>
+    </div>
+
+<!-- EXHIBIT A-030 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-05F: DreamHost billing record — hotels-plus.net /h3>
+        <p><strong>Page Reference:</strong> Page 3 of 4 | <strong>Annex Reference:</strong> ANNEX-D-030</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-05F-2.png" alt="Exhibit D-05F - Domain Infrastructures " class="img-full" onerror="handleImgError(this, 'ANNEX-D-030')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> DreamHost billing record — hotels-plus.net </p>
+        <p><strong>Source Text Excerpt:</strong> DreamHost billing record — hotels-plus.net </p>
+    </div>
+
+    <!-- EXHIBIT A-030 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-05F: DreamHost Support Ticket #8708050  /h3>
+        <p><strong>Page Reference:</strong> Page 4 of 4 | <strong>Annex Reference:</strong> ANNEX-D-031</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-05F-3.png" alt="Exhibit D-05F - Domain Infrastructures " class="img-full" onerror="handleImgError(this, 'ANNEX-D-031')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> DreamHost Support Ticket #8708050  </p>
+        <p><strong>Source Text Excerpt:</strong> DreamHost Support Ticket #8708050  </p>
+    </div>
+
+
+ <!-- EXHIBIT A-030 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-05G: Web Archive www.Malindi-dg.com “Hotels-Plus  </h3>
+        <p><strong>Page Reference:</strong> Page 1 of 8 | <strong>Web Archive:</strong> ANNEX-D-032</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-06G.png" alt="Exhibit D-05G - Domain Infrastructures " class="img-full" onerror="handleImgError(this, 'ANNEX-D-032')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> First booking engine on the web, offers Room types combination Hotels Plus.  </p>
+        <p><strong>Source Text Excerpt:</strong> Lists real hotel inventory (The Loop Beach Resort) cross Reference ..</p>
+    <p>https://web.archive.org/web/20190910210835/http://www.malindi-dg.com:80/index.php</p>
+    </div>
+
+<!-- Web Archive EXHIBIT D-033 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-05G: Web Archive www.Malindi-dg.com “Hotels-Plus" / Booking Page  </h3>
+        <p><strong>Page Reference:</strong> Page 2 of 8 | <strong>Web Archive:</strong> ANNEX-D-033</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-06G-1.png" alt="Exhibit D-05G - Domain Infrastructures " class="img-full" onerror="handleImgError(this, 'ANNEX-D-033')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Live availability filter panel: Destination inputs, Check-In/Check-Out date parameters, Adult/Child counters, Min Beds filter, “Booking page.  </p>
+        <p><strong>Source Text Excerpt:</strong> Promotes "News & Events” Hotel Relocation Program</p>
+        <p>https://web.archive.org/web/20190808224352/http://www.malindi-dg.com:80/index.php?page=booking</p>
+    </div>
+
+
+<!-- Web Archive EXHIBIT D-034 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-05G: Web Archive www.Malindi-dg.com “Hotels-Plus"/INDEX Page  </h3>
+        <p><strong>Page Reference:</strong> Page 3 of 8 | <strong>Web Archive:</strong> ANNEX-D-034</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-06G-.png" alt="Exhibit D-05G - Domain Infrastructures " class="img-full" onerror="handleImgError(this, 'ANNEX-D-034')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Domain www.Malindi-dg.com Working website  / Registered Domain on GoDaddy Jan 2019 / EXHIBIT ....</p>
+        <p><strong>Source Text Excerpt:</strong> Copyrighted 2019 Under Anukit Digital Group/  EXHIBIT ... </p>
+        <p>Last Booking LIVE BOOKING Hiliki House See Exhibit ...</p>
+        <p>https://web.archive.org/web/20190710010647/http://www.malindi-dg.com:80/ </p>
+    </div>
+
+
+<!-- Web Archive EXHIBIT D-035 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-05G: Web Archive www.Malindi-dg.com “Hotels-Plus"/Loginin Page  /h3>
+        <p><strong>Page Reference:</strong> Page 4 of 8 | <strong>Web Archive:</strong> ANNEX-D-035</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-06G-3.png" alt="Exhibit D-05G - Domain Infrastructures " class="img-full" onerror="handleImgError(this, 'ANNEX-D-035')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Login portal with persistent sidebar announcing "New Booking concept-Relocation Program" and "Hotel Relocation Program" across all views.</p>
+        <p><strong>Source Text Excerpt:</strong> https://web.archive.org/web/20190808224342/http://www.malindi-dg.com:80/index.php?customer=login </p>
+        <p>Registered Hotel Wyndahm Hotel. See Booking relaed to same hotel Name </p>
+                <p>https://web.archive.org/web/20190808224415/http://www.malindi-dg.com:80/index.php?page=hotels&hid=2</p>
+
+    </div>
+
+<!-- Web Archive EXHIBIT D-035 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-05G: Web Archive www.Malindi-dg.com “Hotels-Plus"/About Us Page  /h3>
+        <p><strong>Page Reference:</strong> Page 5 of 8 | <strong>Web Archive:</strong> ANNEX-D-036</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-06G-4.png" alt="Exhibit D-05G - Domain Infrastructures " class="img-full" onerror="handleImgError(this, 'ANNEX-D-036')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> "Hotel Relocation Program" across all static content pages</p>
+        <p><strong>Source Text Excerpt:</strong> https://web.archive.org/web/20190808224342/http://www.malindi-dg.com:80/index.php?customer=login </p>
+        <p>Mwezi Boutique Resort Cross-Reference ...HMYBMA5F33 / Guest from AirBNB relocated rom Casa To Mwezi </p>
+                <p>https://web.archive.org/web/20190808224420/http://www.malindi-dg.com:80/pages/about_us.html</p>
+
+    </div>
+
+<!-- Web Archive EXHIBIT D-035 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-05G: Web Archive www.Malindi-dg.com “Hotels-Plus"/Contact US & Gallery Page  </h3>
+        <p><strong>Page Reference:</strong> Page 6 of 8 | <strong>Web Archive:</strong> ANNEX-D-037</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-06G-5.png" alt="Exhibit D-05G - Domain Infrastructures " class="img-full" onerror="handleImgError(this, 'ANNEX-D-037')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> ""Hotel Relocation Program" across all static content pages.</p>
+        <p><strong>Source Text Excerpt:</strong> https://web.archive.org/web/20190808224425/http://www.malindi-dg.com:80/pages/contact_us.html </p>
+        <p>Gallery Page </p>
+                <p>https://web.archive.org/web/20190808220236/http://www.malindi-dg.com:80/pages/gallery.html</p>
+
+    </div>
+
+<!-- Web Archive EXHIBIT D-035 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-05G: Web Archive www.Malindi-dg.com “Hotels-Plus"/Index & XML Page  </h3>
+        <p><strong>Page Reference:</strong> Page 7 of 8 | <strong>Web Archive:</strong> ANNEX-D-038</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-06G-6.png" alt="Exhibit D-05G - Domain Infrastructures " class="img-full" onerror="handleImgError(this, 'ANNEX-D-038')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> "The archived Hotels Plus booking interface already provided conventional user-facing sorting of accommodation search results, including sorting by star rating, name and price. This contemporaneous evidence demonstrates that ordering accommodation results according to selectable criteria was an established feature of OTA booking interfaces before the relevant priority date.</p>
+        <p><strong>Source Text Excerpt:</strong> https://web.archive.org/web/20190710010647/http://www.malindi-dg.com:80/</p>
+        <p>XML Page </p>
+                <p>https://web.archive.org/web/20190609014557/http://www.malindi-dg.com:80/feeds/rss.xml</p>
+                <p>https://web.archive.org/web/*/http://malindi-dg.com/hotels*</p>
+
+    </div>
+
+<!-- Web Archive EXHIBIT D-035 -->
+    <div class="exhibit-card">
+        <h3>Exhibit D-05G: Web Archive www.Malindi-dg.com “Hotels-Plus"/ Hotels Page  </h3>
+        <p><strong>Page Reference:</strong> Page 8 of 8 | <strong>Web Archive:</strong> ANNEX-D-039</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-06G-7.png" alt="Exhibit D-05G - Domain Infrastructures " class="img-full" onerror="handleImgError(this, 'ANNEX-D-039')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> "Hotels Name “Nur Beach Resort, Loop Beach Resort as Mentioned in Pre Automated Stage /Excel Sheet Log 2016&2017 SEE: EXHIBIT .</p>
+        <p>Hotels Name “Whyndahm /Park Lany, and Family Apartment the same Hotels Name displayed in Videos SEE 
+</p>
+        <p><strong>Source Text Excerpt:</strong> Hotels Page</p>
+                <p>https://web.archive.org/web/*/http://malindi-dg.com/hotels*</p>
+
+    </div>
+
+
+    <!-- Web Archive EXHIBIT D-035 -->
+    <div class="exhibit-card">
+        <h3>EXHIBIT D-07H / Booking Confirmation/ ROOM RELOCATION  </h3>
+        <p><strong>Page Reference:</strong> Page 1 of 3 | <strong>Booking Confirmation:</strong> ANNEX-D-040</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-07H-1.png" alt="EXHIBIT D-07H - Booking Confirmation " class="img-full" onerror="handleImgError(this, 'ANNEX-D-040')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> "ROOM RELOCATION Booking Confirmation No.# 7K6ZEQW8YB / SEE: EXHIBIT Schema DB Confirmation .</p>
+        <p></p>
+        <p><strong>Source Text Excerpt:</strong> Booking Confirmation</p>
+                <p></p>
+    </div>
+
+
+
+  <!-- Web Archive EXHIBIT D-035 -->
+    <div class="exhibit-card">
+        <h3>EXHIBIT D-07H / Booking Confirmation/ ROOM RELOCATION / Room Relocation  </h3>
+        <p><strong>Page Reference:</strong> Page 2 of 3 | <strong>Booking Confirmation:</strong> ANNEX-D-041</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-07H.png" alt="EXHIBIT D-07H - Booking Confirmation " class="img-full" onerror="handleImgError(this, 'ANNEX-D-041')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> "ROOM RELOCATION Booking Confirmation No.# 1IQK4QUSTG / SEE: EXHIBIT .</p>
+        <p></p>
+        <p><strong>Source Text Excerpt:</strong> Booking Confirmation</p>
+                <p>See Exh....LIVE Booking confirmation --- 1IQK4QUSTG  </p>
+<p>https://youtu.be/fsRh-98KC-w?si=EZxupmXGEpeyDFPI </p>
+    </div>
+
+
+<!-- Web Archive EXHIBIT D-035 -->
+    <div class="exhibit-card">
+        <h3>EXHIBIT D-07H / Booking Confirmation/ ROOM RELOCATION / Room Relocation  </h3>
+        <p><strong>Page Reference:</strong> Page 3 of 3 | <strong>Booking Confirmation:</strong> ANNEX-D-042</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-07H-2.png" alt="EXHIBIT D-07H - Booking Confirmation " class="img-full" onerror="handleImgError(this, 'ANNEX-D-042')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> "ROOM RELOCATION Booking Confirmation No.# VZ1M5OKLKD / SEE: EXHIBIT .</p>
+        <p></p>
+        <p><strong>Source Text Excerpt:</strong> Booking Confirmation</p>
+                <p>See Exh....Schema DB --- VZ1M5OKLKD  </p>
+    </div>
+
+    <!-- Social Media ADS -->
+    <div class="exhibit-card">
+        <h3>EXHIBIT D-08K / Meta Ads Manager Proof of Campaign Delivery </h3>
+        <p><strong>Page Reference:</strong> Page 1 of 3 | <strong>FaceBook Ad Campaign</strong> ANNEX-D-043</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/face-9.png" alt="EXHIBIT D-07H - FaceBook Ad Campaign " class="img-full" onerror="handleImgError(this, 'ANNEX-D-043')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> "Facebook Ads Manager records show active launched on Sept 9th 2019 and Sept 23th 2019 explicitly driving publish traffic to hotels-plus architectures "hotels plus Ad account ID: 485969588618574" .</p>
+        <p></p>
+        <p><strong>Source Text Excerpt:</strong> Facebook Business Account & Ad Approved</p>
+    </div>
+
+
+
+
+<!-- Web Archive EXHIBIT D-035 -->
+    <div class="exhibit-card">
+        <h3>EXHIBIT D-08K / Meta Ads Manager Proof of Campaign Delivery </h3>
+        <p><strong>Page Reference:</strong> Page 2 of 3 | <strong>FaceBook Ad Campaign:</strong> ANNEX-D-044</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/face-2.png" alt="EXHIBIT D-08K- FaceBook Ad Campaign " class="img-full" onerror="handleImgError(this, 'ANNEX-D-044')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> "Meta Ads Confirmed Ad Approved Sept 13 &7 2019 "hotels plus Ad account ID: 485969588618574" .</p>
+        <p></p>
+        <p><strong>Source Text Excerpt:</strong> FaceBook Ad Campaign</p>
+    </div>
+
+
+
+    <!-- Web Archive EXHIBIT D-035 -->
+    <div class="exhibit-card">
+        <h3>EXHIBIT D-08K / Google Ads July 2020</h3>
+        <p><strong>Page Reference:</strong> Page 3 of 3 | <strong>Google Ads</strong> ANNEX-D-045</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/google ads.png" alt="EXHIBIT D-08K - Google Ads July 2020" class="img-full" onerror="handleImgError(this, 'ANNEX-D-045')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> "Google Ads" .</p>
+        <p></p>
+    </div>
+
+<!-- Web Archive EXHIBIT D-035 -->
+    <div class="exhibit-card">
+        <h3>EXHIBIT D-08K / White Label Hotels Combined Nov. 2019</h3>
+        <p><strong>Page Reference:</strong> Page 1 of 3 | <strong>White Label Hotels Combined Nov. 2019</strong> ANNEX-D-046</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-08K.png" alt="EXHIBIT D-08K - White Label Hotels Combined Nov. 2019" class="img-full" onerror="handleImgError(this, 'ANNEX-D-046')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> "White Label Hotels Combined Nov. 2019" .</p>
+                <p><strong>Corresponds to Claim:</strong> Exhibit Live Aggregator Integration with HotelsCombined (Nov 14, 2019) “Prior Art”.</p>
+                <p>Live B2B launch announcement and white-label environment (book.hotels-plus.net) integrated with HotelsCombined dated November 14, 2019. Database dump excerpt confirming active deployment and PHP/MySQL backend architecture under Anuket Digital Group OÜ </p>
+
+        <p>https://www.facebook.com/photo?fbid=1218982094958744&set=pb.100068252152577.-2207520000 </p>
+    </div>
+
+
+
+<!-- Web Archive EXHIBIT D-035 -->
+    <div class="exhibit-card">
+        <h3>EXHIBIT D-09L / LinkedIn Post PUBLIS Group - 2019</h3>
+        <p><strong>Page Reference:</strong> Page 2 of 3 | <strong>LinkedIn Post PUBLIS Group - 2019</strong> ANNEX-D-047</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-09L.png" alt="EXHIBIT D-08K - LinkedIn Post PUBLIS Group - 2019" class="img-full" onerror="handleImgError(this, 'ANNEX-D-047')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> "LinkedIn Post PUBLIS Group - 2019" .</p>
+                <p><strong>Corresponds to Claim:</strong> LinkedIn Post PUBLIS Group - 2019- “Prior Art”.</p>
+                <p>Primary Public Disclosure (Group 54658 - Wellness Travel & Tourism):
+Post content, technical descriptions of the room relocation algorithm, and direct shortlinks to prototype demonstration videos (https://lnkd.in/ddM_hkA and https://lnkd.in/dwA3fFW) were accessible to any internet user without restriction in 2019 </p>
+
+        <p>https://www.linkedin.com/groups/54658/?highlightedUpdateUrn=urn%3Ali%3AgroupPost%3A54658-6552792449557774336&q=highlightedFeedForGroups </p>
+    </div>
+
+
+<!-- Web Archive EXHIBIT D-035 -->
+    <div class="exhibit-card">
+        <h3>EXHIBIT D-09L /LinkedIn Post / Supportive evidences - 2019</h3>
+        <p><strong>Page Reference:</strong> Page 3 of 3 | <strong>LinkedIn Post PUBLIS Group - 2019</strong> ANNEX-D-048</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/EXHIBIT-D-09L-1.png" alt="EXHIBIT D-08K - Supportive evidences  - 2019" class="img-full" onerror="handleImgError(this, 'ANNEX-D-047')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> "Supportive evidences  - 2019" .</p>
+                <p><strong>Corresponds to Claim:</strong> Supportive evidences 2019- “Prior Art”.</p>
+                <p>:
+Post content, technical descriptions of the room relocation algorithm, and direct shortlinks to prototype demonstration videos (https://lnkd.in/ddM_hkA and https://lnkd.in/dwA3fFW) in 2019 </p>
+
+        <p>https://www.linkedin.com/groups/2617317/?highlightedUpdateUrn=urn%3Ali%3AgroupPost%3A2617317-6552792609083928576&q=highlightedFeedForGroups </p>
+    </div>
+
+
+   <!-- <h2>Claim Mapping Matrix</h2>
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th>Target Claim No.</th>
+                <th>Claim Text (Verbatim)</th>
+                <th>Corresponding Prior Art Exhibit</th>
+                <th>Annex Page Ref</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Claim 1.1</strong></td>
+                <td>"A system comprising: memory storing listing inventory; and one or more processors configured to execute instructions..."</td>
+                <td>Exhibit A-PRE02 / Exhibit A-PRE03</td>
+                <td>ANNEX-A-003 (p. 2)<br>ANNEX-A-004 (p. 2)[cite: 35, 36]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1.2</strong></td>
+                <td>"...receiving a listing request specifying a length of stay..."</td>
+                <td>Exhibit A (Page 3) / Exhibit A (Page 4)</td>
+                <td>ANNEX-A-005 (p. 3)<br>ANNEX-A-006 (p. 4)[cite: 37, 38]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1.3</strong></td>
+                <td>"...determining that available inventory fails to satisfy a minimum availability threshold for the continuous length of stay..."</td>
+                <td>Exhibit A-01P (Page 1) / Exhibit D-03C (Page 1) / Exhibit D-03C1 (Page 1)</td>
+                <td>ANNEX-A-008 (p. 1)<br>ANNEX-A-019 (p. 1)<br>ANNEX-A-025 (p. 1)[cite: 40, 51, 57]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1.4</strong></td>
+                <td>"...generating a combined listing comprising a first portion for a first stay duration at a first listing and a second portion for a second stay duration at a second listing..."</td>
+                <td>Exhibit A (Page 5) / Exhibit A-01P (Pages 2-3) / Exhibit D-01B (Pages 1, 4) / Exhibit D-03C (Pages 2, 5) / Exhibit D-03C1 (Page 2)</td>
+                <td>ANNEX-A-007 (p. 5)<br>ANNEX-A-009 (p. 2)<br>ANNEX-A-010 (p. 3)<br>ANNEX-A-016 (p. 1)<br>ANNEX-A-018 (p. 4)<br>ANNEX-A-020 (p. 2)<br>ANNEX-A-023 (p. 5)<br>ANNEX-A-26 (p. 2)[cite: 39, 41, 42, 48, 50, 52, 55, 58]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1.5</strong></td>
+                <td>"...causing presentation of the combined listing in ranked order."</td>
+                <td>Exhibit D-02A (Page 3) / Exhibit D-03C (Page 3) / Exhibit D-03C1 (Page 3)</td>
+                <td>ANNEX-A-013 (p. 3)<br>ANNEX-A-021 (p. 3)<br>ANNEX-A-027 (p. 3)[cite: 45, 53, 59]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1.6</strong></td>
+                <td>"...processing booking requests for multi-leg stay segments."</td>
+                <td>Exhibit D-01B (Page 3) / Exhibit D-03C (Page 4)</td>
+                <td>ANNEX-A-017 (p. 3)<br>ANNEX-A-022 (p. 4)[cite: 49, 54]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1.7</strong></td>
+                <td>"...rendering search results in ranked order based on specified parameters."</td>
+                <td>Exhibit D-03C (Page 6)</td>
+                <td>ANNEX-C-024 (p. 6)[cite: 56]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 2</strong></td>
+                <td>"The system of claim 1, wherein listings are categorized by thematic attributes or user groups."</td>
+                <td>Exhibit D-01B (Page 1)</td>
+                <td>ANNEX-A-016 (p. 1)[cite: 48]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 3</strong></td>
+                <td>"The system of claim 1, wherein the minimum length of stay threshold is configured as a minimum night duration constraint."</td>
+                <td>Exhibit D-01B (Page 3)</td>
+                <td>ANNEX-A-017 (p. 3)[cite: 49]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 4</strong></td>
+                <td>"The system of claim 1, wherein split availability is evaluated using stored user profiles and historical booking activity."</td>
+                <td>Exhibit A-PRE01 / Exhibit A-PRE02</td>
+                <td>ANNEX-A-002 (p. 1)<br>ANNEX-A-003 (p. 2)[cite: 34, 35]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 12</strong></td>
+                <td>"The system of claim 1, wherein the second listing is selected within a maximum geographic distance limit from the first listing."</td>
+                <td>Exhibit D-01B (Page 1) / Exhibit D-03C (Page 2)</td>
+                <td>ANNEX-A-016 (p. 1)<br>ANNEX-A-020 (p. 2)[cite: 48, 52]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 13</strong></td>
+                <td>"The system of claim 1, wherein behavioral inferences or session parameters are monitored dynamically via endpoint requests."</td>
+                <td>Exhibit D-02A (Page 3) / Exhibit D-04E</td>
+                <td>ANNEX-A-013 (p. 3)<br>ANNEX-A-030 (p. 3)[cite: 45, 62]</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+-->
+</body>
+</html>
