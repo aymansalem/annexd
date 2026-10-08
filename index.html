@@ -257,6 +257,50 @@
         text-shadow: none !important;
     }
 }
+        /* =========================================================
+   EPO-STYLE PRINT CONTROL — ANNEX IMAGES
+   A4 / controlled usable drawing area
+   ========================================================= */
+
+@media print {
+
+  /* A4 page */
+  @page {
+    size: A4;
+    margin: 25mm 15mm 10mm 25mm;
+  }
+
+  /* Never allow an exhibit image to exceed the usable area */
+  img,
+  .exhibit-image,
+  .evidence-image,
+  figure img {
+    max-width: 17cm !important;
+    max-height: 26.2cm !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Keep figures together */
+  figure,
+  .exhibit,
+  .evidence,
+  .image-container {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Do not enlarge small screenshots */
+  img {
+    min-width: 0 !important;
+    min-height: 0 !important;
+  }
+
+}
     </style>
     <script>
         // Prevents page hanging or infinite loading spinners if local image files are missing
