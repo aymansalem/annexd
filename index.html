@@ -1026,90 +1026,394 @@ Post content, technical descriptions of the room relocation algorithm, and direc
     </div>
 
 
-   <<h2>Claim Mapping Matrix</h2>
-    <table class="matrix-table">
-        <thead>
-            <tr>
-                <th>Target Claim No.</th>
-                <th>Claim Text (Verbatim)</th>
-                <th>Corresponding Prior Art Exhibit</th>
-                <th>Annex Page Ref</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Claim 1.1</strong></td>
-                <td>"A system comprising: memory storing listing inventory; and one or more processors configured to execute instructions..."</td>
-                <td>Exhibit A-PRE02 / Exhibit A-PRE03</td>
-                <td>ANNEX-A-003 (p. 2)<br>ANNEX-A-004 (p. 2)</td>
-            </tr>
-            <tr>
-                <td><strong>Claim 1.2</strong></td>
-                <td>"...receiving a listing request specifying a length of stay..."</td>
-                <td>Exhibit A (Page 3) / Exhibit A (Page 4)</td>
-                <td>ANNEX-A-005 (p. 3)<br>ANNEX-A-006 (p. 4)</td>
-            </tr>
-            <tr>
-                <td><strong>Claim 1.3</strong></td>
-                <td>"...determining that available inventory fails to satisfy a minimum availability threshold for the continuous length of stay..."</td>
-                <td>Exhibit A-01P (Page 1) / Exhibit D-03C (Page 1) / Exhibit D-03C1 (Page 1)</td>
-                <td>ANNEX-A-008 (p. 1)<br>ANNEX-A-019 (p. 1)<br>ANNEX-A-025 (p. 1)/td>
-            </tr>
-            <tr>
-                <td><strong>Claim 1.4</strong></td>
-                <td>"...generating a combined listing comprising a first portion for a first stay duration at a first listing and a second portion for a second stay duration at a second listing..."</td>
-                <td>Exhibit A (Page 5) / Exhibit A-01P (Pages 2-3) / Exhibit D-01B (Pages 1, 4) / Exhibit D-03C (Pages 2, 5) / Exhibit D-03C1 (Page 2)</td>
-                <td>ANNEX-A-007 (p. 5)<br>ANNEX-A-009 (p. 2)<br>ANNEX-A-010 (p. 3)<br>ANNEX-A-016 (p. 1)<br>ANNEX-A-018 (p. 4)<br>ANNEX-A-020 (p. 2)<br>ANNEX-A-023 (p. 5)<br>ANNEX-A-26 (p. 2)</td>
-            </tr>
-            <tr>
-                <td><strong>Claim 1.5</strong></td>
-                <td>"...causing presentation of the combined listing in ranked order."</td>
-                <td>Exhibit D-02A (Page 3) / Exhibit D-03C (Page 3) / Exhibit D-03C1 (Page 3)</td>
-                <td>ANNEX-A-013 (p. 3)<br>ANNEX-A-021 (p. 3)<br>ANNEX-A-027 (p. 3)</td>
-            </tr>
-            <tr>
-                <td><strong>Claim 1.6</strong></td>
-                <td>"...processing booking requests for multi-leg stay segments."</td>
-                <td>Exhibit D-01B (Page 3) / Exhibit D-03C (Page 4)</td>
-                <td>ANNEX-A-017 (p. 3)<br>ANNEX-A-022 (p. 4)</td>
-            </tr>
-            <tr>
-                <td><strong>Claim 1.7</strong></td>
-                <td>"...rendering search results in ranked order based on specified parameters."</td>
-                <td>Exhibit D-03C (Page 6)</td>
-                <td>ANNEX-C-024 (p. 6)</td>
-            </tr>
-            <tr>
-                <td><strong>Claim 2</strong></td>
-                <td>"The system of claim 1, wherein listings are categorized by thematic attributes or user groups."</td>
-                <td>Exhibit D-01B (Page 1)</td>
-                <td>ANNEX-A-016 (p. 1)</td>
-            </tr>
-            <tr>
-                <td><strong>Claim 3</strong></td>
-                <td>"The system of claim 1, wherein the minimum length of stay threshold is configured as a minimum night duration constraint."</td>
-                <td>Exhibit D-01B (Page 3)</td>
-                <td>ANNEX-A-017 (p. 3)</td>
-            </tr>
-            <tr>
-                <td><strong>Claim 4</strong></td>
-                <td>"The system of claim 1, wherein split availability is evaluated using stored user profiles and historical booking activity."</td>
-                <td>Exhibit A-PRE01 / Exhibit A-PRE02</td>
-                <td>ANNEX-A-002 (p. 1)<br>ANNEX-A-003 (p. 2)</td>
-            </tr>
-            <tr>
-                <td><strong>Claim 12</strong></td>
-                <td>"The system of claim 1, wherein the second listing is selected within a maximum geographic distance limit from the first listing."</td>
-                <td>Exhibit D-01B (Page 1) / Exhibit D-03C (Page 2)</td>
-                <td>ANNEX-A-016 (p. 1)<br>ANNEX-A-020 (p. 2)</td>
-            </tr>
-            <tr>
-                <td><strong>Claim 13</strong></td>
-                <td>"The system of claim 1, wherein behavioral inferences or session parameters are monitored dynamically via endpoint requests."</td>
-                <td>Exhibit D-02A (Page 3) / Exhibit D-04E</td>
-                <td>ANNEX-A-013 (p. 3)<br>ANNEX-A-030 (p. 3)</td>
-            </tr>
-        </tbody>
+  ```html
+<h2>Claim Mapping Matrix</h2>
+
+<p>
+    This matrix identifies the Hotels Plus documentary and technical exhibits
+    relevant to the limitations of the claims under consideration. The
+    subdivisions of Claim 1 below are analytical elements only; they are not
+    separate claims. Exhibit references identify material for examination and
+    do not, by themselves, establish that every limitation is disclosed in a
+    single prior-art document.
+</p>
+
+<table class="matrix-table">
+    <thead>
+        <tr>
+            <th>Target Claim / Limitation</th>
+            <th>Claim Text (Verbatim)</th>
+            <th>Corresponding Hotels Plus Exhibit</th>
+            <th>Annex Page Reference</th>
+            <th>Evidence Assessment</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <!-- CLAIM 1: ANALYTICAL LIMITATIONS -->
+
+        <tr>
+            <td><strong>Claim 1 — System Architecture</strong></td>
+            <td>
+                <em>Insert the corresponding verbatim limitation from the
+                current amended Claim 1.</em>
+                <br><br>
+                Original draft wording:
+                "A system comprising: memory storing listing inventory; and
+                one or more processors configured to execute instructions..."
+            </td>
+            <td>
+                Exhibit A-PRE02 / Exhibit A-PRE03
+            </td>
+            <td>
+                ANNEX-A-003 (p. 2)<br>
+                ANNEX-A-004 (p. 2)
+            </td>
+            <td>
+                <strong>To be verified.</strong>
+                These exhibits should be relied upon only for the system
+                architecture and operations they actually disclose.
+                Confirm whether they establish the claimed computer
+                implementation rather than merely the existence of
+                listing-related data.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Claim 1 — Stay Request</strong></td>
+            <td>
+                <em>Insert the corresponding verbatim limitation from the
+                current amended Claim 1.</em>
+                <br><br>
+                Original draft wording:
+                "...receiving a listing request specifying a length of stay..."
+            </td>
+            <td>
+                Exhibit A (Page 3) / Exhibit A (Page 4)
+            </td>
+            <td>
+                ANNEX-A-005 (p. 3)<br>
+                ANNEX-A-006 (p. 4)
+            </td>
+            <td>
+                <strong>To be verified.</strong>
+                Assess whether the exhibits disclose the receipt and
+                processing of a requested stay duration. A displayed
+                date-selection interface alone does not establish every
+                subsequent processing operation.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Claim 1 — Availability Constraint</strong></td>
+            <td>
+                <em>Insert the corresponding verbatim limitation from the
+                current amended Claim 1.</em>
+                <br><br>
+                Original draft wording:
+                "...determining that available inventory fails to satisfy
+                a minimum availability threshold for the continuous length
+                of stay..."
+            </td>
+            <td>
+                Exhibit A-01P (Page 1) /
+                Exhibit D-03C (Page 1) /
+                Exhibit D-03C1 (Page 1)
+            </td>
+            <td>
+                ANNEX-A-008 (p. 1)<br>
+                ANNEX-A-019 (p. 1)<br>
+                ANNEX-A-025 (p. 1)
+            </td>
+            <td>
+                <strong>Partial support to be assessed.</strong>
+                Distinguish evidence that a continuous stay cannot be
+                accommodated from evidence of an implemented computer
+                determination using the particular threshold required
+                by the claim.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Claim 1 — Combined Stay / Split-Stay Mechanism</strong></td>
+            <td>
+                <em>Insert the corresponding verbatim limitation from the
+                current amended Claim 1.</em>
+                <br><br>
+                Original draft wording:
+                "...generating a combined listing comprising a first portion
+                for a first stay duration at a first listing and a second
+                portion for a second stay duration at a second listing..."
+            </td>
+            <td>
+                Exhibit A (Page 5) /
+                Exhibit A-01P (Pages 2–3) /
+                Exhibit D-01B (Pages 1, 4) /
+                Exhibit D-03C (Pages 2, 5) /
+                Exhibit D-03C1 (Page 2)
+            </td>
+            <td>
+                ANNEX-A-007 (p. 5)<br>
+                ANNEX-A-009 (p. 2)<br>
+                ANNEX-A-010 (p. 3)<br>
+                ANNEX-A-016 (p. 1)<br>
+                ANNEX-A-018 (p. 4)<br>
+                ANNEX-A-020 (p. 2)<br>
+                ANNEX-A-023 (p. 5)<br>
+                ANNEX-A-026 (p. 2)
+            </td>
+            <td>
+                <strong>Core technical issue.</strong>
+                Assess whether the exhibits, read in their proper context,
+                establish the underlying split-stay or relocation mechanism:
+                a requested stay is divided into successive accommodation
+                portions supplied by different rooms or properties.
+                Separately identify evidence of the computer-generated
+                combined listing, if required by the claim.
+                Do not equate a completed relocation or manual arrangement
+                automatically with disclosure of the entire claimed
+                computer-implemented operation.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Claim 1 — Ranked Presentation</strong></td>
+            <td>
+                <em>Insert the corresponding verbatim limitation from the
+                current amended Claim 1.</em>
+                <br><br>
+                Original draft wording:
+                "...causing presentation of the combined listing in ranked order."
+            </td>
+            <td>
+                Exhibit D-02A (Page 3) /
+                Exhibit D-03C (Page 3) /
+                Exhibit D-03C1 (Page 3)
+            </td>
+            <td>
+                ANNEX-A-013 (p. 3)<br>
+                ANNEX-A-021 (p. 3)<br>
+                ANNEX-A-027 (p. 3)
+            </td>
+            <td>
+                <strong>To be verified.</strong>
+                Determine whether the evidence discloses ranked presentation
+                of the combined stay itself, rather than merely displaying
+                ordinary search results or ordering individual listings.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Claim 1 — Booking Requests</strong></td>
+            <td>
+                <em>Verify against the current amended Claim 1.</em>
+                <br><br>
+                Original draft wording:
+                "...processing booking requests for multi-leg stay segments."
+            </td>
+            <td>
+                Exhibit D-01B (Page 3) /
+                Exhibit D-03C (Page 4)
+            </td>
+            <td>
+                ANNEX-A-017 (p. 3)<br>
+                ANNEX-A-022 (p. 4)
+            </td>
+            <td>
+                <strong>Claim-text verification required.</strong>
+                Do not treat this wording as a separate Claim 1 limitation
+                unless it appears in the operative amended claim.
+                If relevant, distinguish evidence of booking individual
+                segments from evidence of the claimed combined-listing
+                process.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Claim 1 — Search-Result Parameters</strong></td>
+            <td>
+                <em>Verify against the current amended Claim 1.</em>
+                <br><br>
+                Original draft wording:
+                "...rendering search results in ranked order based on
+                specified parameters."
+            </td>
+            <td>
+                Exhibit D-03C (Page 6)
+            </td>
+            <td>
+                ANNEX-C-024 (p. 6)
+            </td>
+            <td>
+                <strong>Claim-text and exhibit verification required.</strong>
+                Identify the actual ranking parameters disclosed and
+                distinguish them from parameters merely available in the
+                interface or database.
+            </td>
+        </tr>
+
+        <!-- DEPENDENT CLAIMS -->
+
+        <tr>
+            <td><strong>Claim 2</strong></td>
+            <td>
+                <em>Insert the verbatim text of current amended Claim 2.</em>
+                <br><br>
+                Original draft wording:
+                "The system of claim 1, wherein listings are categorized
+                by thematic attributes or user groups."
+            </td>
+            <td>
+                Exhibit D-01B (Page 1)
+            </td>
+            <td>
+                ANNEX-A-016 (p. 1)
+            </td>
+            <td>
+                <strong>Not established by the reference alone.</strong>
+                Verify whether the exhibit discloses the particular
+                categorization required by the actual claim.
+                Do not infer a thematic destination category or other
+                specific limitation merely from the existence of
+                listing categories or user groups.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Claim 3</strong></td>
+            <td>
+                <em>Insert the verbatim text of current amended Claim 3.</em>
+                <br><br>
+                Original draft wording:
+                "The system of claim 1, wherein the minimum length of stay
+                threshold is configured as a minimum night duration constraint."
+            </td>
+            <td>
+                Exhibit D-01B (Page 3)
+            </td>
+            <td>
+                ANNEX-A-017 (p. 3)
+            </td>
+            <td>
+                <strong>To be verified.</strong>
+                Determine whether the exhibit discloses the claimed
+                minimum-stay condition and how it is applied.
+                A minimum-night setting alone does not necessarily
+                establish the complete split-stay decision process.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Claim 4</strong></td>
+            <td>
+                <em>Insert the verbatim text of current amended Claim 4.</em>
+                <br><br>
+                Original draft wording:
+                "The system of claim 1, wherein split availability is
+                evaluated using stored user profiles and historical
+                booking activity."
+            </td>
+            <td>
+                Exhibit A-PRE01 / Exhibit A-PRE02
+            </td>
+            <td>
+                ANNEX-A-002 (p. 1)<br>
+                ANNEX-A-003 (p. 2)
+            </td>
+            <td>
+                <strong>Partial support to be assessed.</strong>
+                Evidence of stored customer information, booking history,
+                or user groups does not by itself establish that such
+                information is used to evaluate split availability.
+                Identify the disclosed operational link, if any.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Claim 12</strong></td>
+            <td>
+                <em>Insert the verbatim text of current amended Claim 12.</em>
+                <br><br>
+                Original draft wording:
+                "The system of claim 1, wherein the second listing is
+                selected within a maximum geographic distance limit
+                from the first listing."
+            </td>
+            <td>
+                Exhibit D-01B (Page 1) /
+                Exhibit D-03C (Page 2)
+            </td>
+            <td>
+                ANNEX-A-016 (p. 1)<br>
+                ANNEX-A-020 (p. 2)
+            </td>
+            <td>
+                <strong>Partial support to be assessed.</strong>
+                Identify whether the evidence establishes a geographic
+                distance calculation or constraint relevant to relocation.
+                Distinguish a configurable search radius, a distance
+                calculated from a reference point, and a maximum distance
+                expressly applied when selecting the second listing.
+                Do not infer that these are equivalent without supporting
+                evidence.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Claim 13</strong></td>
+            <td>
+                <em>Insert the verbatim text of current amended Claim 13.</em>
+                <br><br>
+                Original draft wording:
+                "The system of claim 1, wherein behavioral inferences or
+                session parameters are monitored dynamically via endpoint
+                requests."
+            </td>
+            <td>
+                Exhibit D-02A (Page 3) / Exhibit D-04E
+            </td>
+            <td>
+                ANNEX-A-013 (p. 3)<br>
+                ANNEX-A-030 (p. 3)
+            </td>
+            <td>
+                <strong>Limited evidentiary significance unless verified.</strong>
+                Endpoint requests may establish a software interaction
+                or data exchange. They do not independently prove that
+                behavioral inferences are generated, that session
+                parameters are monitored dynamically, or that either
+                operation performs the function required by the actual
+                claim.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Assessment Note</h3>
+
+<p>
+    The exhibit references above identify evidence for examination; they
+    are not a conclusion that every limitation is disclosed. The relevant
+    disclosure date, public accessibility, and technical content must be
+    assessed for each exhibit.
+</p>
+
+<p>
+    For novelty under Article 54(2) EPC, determine whether all features of
+    the claim are directly and unambiguously derivable from one prior-art
+    disclosure. For inventive step under Article 56 EPC, identify the
+    distinguishing features, formulate the objective technical problem,
+    and assess whether the claimed solution would have been obvious to
+    the skilled person.
+</p>
+
+<p>
+    The Hotels Plus evidence is presented independently. KAYAK is addressed
+    separately as a contextual comparator and is not incorporated into
+    the Hotels Plus exhibit mapping.
+</p>
+```
+
     </table>
 
 </div>
